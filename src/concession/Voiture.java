@@ -22,6 +22,16 @@ public class Voiture {
         return marque;
     }
 
+    public String getPneux() {
+        return  Arrays.toString(this.pneux);
+    }
+
+    public void setPneux(String marquePneu, double largeurPneu) {
+        for (int i = 0; i < pneux.length; i++) {
+            this.pneux[i] = new Pneu(marquePneu,largeurPneu);
+        }
+    }
+
     @Override
     public String toString() {
         return "Voiture{" +

@@ -16,10 +16,23 @@ public class Concessionnaire {
         this.marque = marque;
     }
 
+    public String getMarque() {
+        return marque;
+    }
+
+    public String getStock() {
+        return this.stock.toString();
+    }
+
     public boolean ajouterStock(Voiture voiture) {
         if (voiture.getMarque() != this.marque) return false;
         return this.stock.add(voiture);
     }
+
+    public boolean retirerStock(Voiture voiture) {
+        return this.stock.remove(voiture);
+    }
+
 
     @Override
     public String toString() {
